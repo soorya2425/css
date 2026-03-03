@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Contact Card</title>
+<style>
+    
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            z-index: 1000; 
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding-top: 80px; 
+            background-color: #aa9595;
+            display: flex;
+            justify-content: center;
+        }
+
+    
+        .profile-card {
+            position: relative; 
+            background: white;
+            width: 600px;
+            height: 250px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: auto; 
+        }
+
+        
+        .profile-img {
+            float: left; 
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            margin-right: 20px;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+
+        .content {
+            text-align: center; 
+            padding-right: 160px;
+            padding-left: 20px; 
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+    
+        .contact-info {
+            position: absolute;
+            top: 10px;
+            right: 7px;
+           padding: 10px;
+            text-align: center;
+            border-left: 2px solid #eee; 
+            s
+        }
+
+        h2, p {
+            margin: 10px 0;
+        }
+
+        .email { color: #3498db; font-size: 0.9em; }
+</style>
+</head>
+<body>
+
+    <div class="header">Company Contact Card</div>
+
+    <div class="profile-card">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAgVBMVEX///8AAAD5+fm9vb22trbKysqpqang4OCdnZ3b29uamprFxcXW1tb7+/v29vbQ0NCSkpKsrKxHR0ft7e1CQkLm5uaioqJRUVE4ODiPj48zMzPx8fGIiIgkJCRycnJqamoTExMtLS1cXFx8fHxra2tERERhYWEeHh4ODg53d3coKCiMw3qtAAAJOElEQVR4nO2diZKjKhSG0bjF3bY1Y9tb0jO9vf8DXtAsLgcDRryQ4q+aSWIj8InsHEBIS0slRSZWpLoaCJDPjOHrKiqKzfHFeP14CNWI594AR0T3BzhgukfAHhWl7FFd0aW4uc8k7HBFKyVh8PPQ6idYJ8AzGFB3iNDBuOiwTpDm4FOsdkZXu1XCXJVwY/S1WSPQVQk/B4SfawS6KuHjgPBxjUA14aLShEK0DmHsBt7Hw4sx1MvDhxe4YptTaxBuDu8jtq7eDyKrDfGE8W4Sr9VOXDqKJ/zDAGgYf4SFL5wwZQI0DF9UBG4lNLcbz4eU5s3fI0ZAwzj1AaIM8M3bbGfH8CbC5JVahry3Pg6bonSdSpthlXL28DVZnTD8NxHh19bNKzPh8YZgwsm/cF3C6Rx27OBO1xNdvV8nNIx0TcK3yahUraOQGdAw2gSKp/19W49wMiKv+dFVxUF4fCgon3yzuRHnEnpTsSjPzqZy6lD/znc5U868dQhdtjgUHICGUbA9P3cVwqmWWGf4JeMizLj9F0e4nYpop9oaDltMqzOokUy5265A+DER/tPpKfh+yV5XEL2Xvn+K/dOEu+cVCKfCP9bKJRfcRcdSaqqaeaJHbCnCXgHyZIVdHZuX+UxAw6hbD6Ker1bvmRb0qC1E2M0le7hnN900mRI82h/vO064GqizCLvNaee6Ez5R+vvOdSewZhFa10Ob/5bmsIfdR2bxRFYUIWdVeFFG8U8+QlRv56imeSch4cLShFRpQlCaUIQ0IVWaEJQmFCFNSNXqhObm5/Fxl3IOJylEeG6QHzgZVSHsDhPyjdArQtgfffnguVUNwnwwmcMTUyUIR+NnXxxLPpUgfBgS8tysAiEwicExtqsCITDAyDEFoQIhMDbFMXqtKOEve7AqEAKDxC/3RWgDacheXahACEwn3Vk+BGqL+ypL63GFb3yzN00VIIRnoyjzMNO3S0oIzyjeEyG8QIW5MFWAEH0DgA/Md6tACK0TY183qwIhlBGZs6EShCj4GvDxjEYpQTjqAt/dKMaIkMeMVA3C4WIxnpU/ahAOFvwdeMJUg3Cw2I1r8ZYihHWPkLqyBJImpGpNwiQfEOYcS/BUIPRxxusR4j7xHbXa4mxPXsvwYmX5uyUv7T5jtMuTmzC2mlb3F4aJT7sqHMiPphn3ZrFAykto2umpKdOOHfrN98ZiwTyl6ENqX4uApIRJ2jUreDle/DX2bRETdS2Dd+lkuSMl4XZv9PTbXrafjN2xU/Hbd/A0YWcgJeGws9QSthPddvN9QGh80T2TkXDU431pBmXaZfBN4RKN7NfpvQ0ZCUcmaO9tI4ZkzXbisB4N3bxSfZORcPgKnoxNgvO3se3PnuqbhIT1MPanlLPOcXweO1FpnTdkmdfkPmLu1dhJxoALao9KQkLIcqmJWvNt6M1J1PpCQkJgurBZI9RmPpIRIQs4m+adhIRQChFD2EurDbK8p0ZeQkLQPC86GT9XOEjIQUnzTkJC0Fw/PBWgFcXEkNphlJAQqAqaJGpz3zMlkalriCQkBK3q/56u48bLX8gBtVEjISFojv3nNAX1Rtm4hjqGKiEhvEdJftw68UCxUKRujiUhIby3UHBM2x1l1pu615B8hPF4Zy+i9EwIb41CXSUlHyHFTPZwJqRsm0CbM5WPkLLtwu9xM5CHaNy5akRrmMpHSDPmdtv8+UjbO4TFPzkIaTsQWW0Z+wg1W4lojRr5CGlp+HEkpG2toU4aRnuY4KktY38pW2tQ12PKR4gKts32Bvwq9fERcjdZ9Xe3Z0L7fvj8KDcTu5VJSXgOI9/allOmzz9vh11Hn28/z2mZbRKXYa5UasJFpAmp0oSgNKEIaUKqNCEoTShCmpAqTQjqKqF7m+QnBAf0OQQN7ctFOLVxJIsgoz25COf0fbuChoU1oSbU+ZCP8DCMMqegKTa5COvSu0UlNGwjF6EIaUKqNCEoTShCmpAqTQjqGmG8YRd1MeJAchGCq51oYnwJ5CLkapcynjkiFyFX34K63rIvTUiVJgSl8yH7UWQG87YDchEiO2AW67E4khEKkCakShOC0oQipAmp0oSgNKEIaUKqZhF2QxN2FvNA/tynOouwa1f3zbUX0mwVXcN2rmOBZxH2rUUqR7z6Z9Ky79Q3l5B6svQ6olp/LUjIemC6GPEdGzGPkO8U3KXFl/PnEfL14hcWfe+MJQmBLSFWE9cmaLMJQWv7dcR9dM9Mwl4NvKa4WxizCf8nRP4m1HzCG46Lna8ZreAbCFFNs7ATpQ/OQuZmQrJwZuoQ9GW1A5fZiCbEit3EFq/EZdx8UACh9NKE6ksTqi9NqL40ofrShOpLE6ovTai+NKH60oTqSxOqL02ovjSh+lqGsMgajf+QXFnkHJHbgs549nmZhb1F2SKPfRnCrVcQjf+wuXKiU/RcFG5QnWck7PO6drdA1eyR/K6WIXSPRhN1XSQ52oYmivMiKVrCnCRkQSBc/Jk0z2GbtIkVNVtgBDj1ozCpkWlZOTJD4iavURqjOglvxVwoDY+EoW/ZqRVYHnJTa+uHhND2QqtESdY8B8sJnQ2KvE3oN+9vS1hXyEyDJC3iLHPjyk58m9yZmrmfBLem5EJpmGJVGxQ6CFk2QmnkejjiKY5nlGKvsxBhlMytyRRuGicWQnEzm9sS4v+JlV5Rkre0ICnuNIQRcTh/1qlPdiOh036GOEYWjqFvumT9YGpukpwkb7JBVhj5OI2d0qkKyyMfJOYtYVwhfKEs0yYfbi3HyxrCOHKeM1aDDJqWzYdDwggTEqufACeNE+I0zpAZxchKItNsz9JpCHHSO9vmEia0y8J02zQkx3qFPsfxc5AWy4cRVpcQRy9s44mLDfLPK3OcWLg0qWLyCrteSxihyK1cZOO3IHGQjRMbE1ltGkY29o/ZylQsYdVkxPhEmJoufuu8mMQz98vmNC6bpPM2LdMQp2la+k1hapIbS7JtkuUT90Vl5alT2j65s8JvqVc6zAdbwxLVpnGzi5ftlyDpBgSEF/XdHy/eyCeQ0On/roP05rjO04ns9mfVVzzYsMsM5q2kuFkXsEVaSBLqwmX+Ty+RYEWd7HefiRhTf9yJ4smfd6AR0b0hAjxmfD/lTRTDdTxu/5pmpLoaiJWfqJbWbfoPtJ6XmjZ7hAsAAAAASUVORK5CYII=" alt="Profile" class="profile-img">
+
+        <div class="content">
+            <h2>Soorya S.</h2>
+            <p><strong>Senior Project Manager</strong></p>
+            <p>Soorya is a dedicated professional with a background in non-IT sectors, bringing a fresh perspective to our tech-driven environment. Expert in logistics and team coordination.
+            With a passion for project management and a knack for problem-solving, Soorya ensures that our projects are delivered on time and within budget. Her leadership skills and ability to adapt to new challenges make her an invaluable asset to our team.</p>
+        </div>
+
+        <div class="contact-info">
+            <p><strong>Contact Info</strong></p>
+            <p>📞 +1 234 567</p>
+            <p class="email">soorya@company.com</p>
+        </div>
+        </div>
+        </body>
+        </html>
