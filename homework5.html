@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post</title>
+</head>
+<style>
+ .blog-post {
+        width: 60%;
+        margin: 30px auto;
+        padding: 20px;
+        border: 1px solid gray;
+        border-radius: 8px;
+}
+
+
+ .blog-post p::first-line {
+        font-weight: bold;
+}
+
+ .blog-post p::first-letter {
+        font-size: 30px;
+        color: rgb(155, 18, 18);
+}
+
+  
+  blockquote {
+         margin: 20px 0;
+         padding: 10px;
+         background-color: #6cda35;
+         font-style: italic;
+}
+  blockquote::before {
+         content: "“ ";
+         font-size: 25px;
+         color: rgb(45, 53, 160);
+}
+
+a:link {
+         color: blue;
+}
+
+a:visited {
+         color: purple;
+}
+
+a:hover {
+         color: red;
+         text-decoration: underline;
+}
+
+h4 {
+          display: inline-block;
+          margin-right: 20px;
+}
+
+h4 + h4 {
+          color: rgb(190, 72, 153);
+}
+
+
+
+</style>
+<body>
+    <div class="blog post">
+    <h1>Blog Post</h1>
+    <p><strong>Author name:</strong> Soorya</p>
+    <p>
+    This is a simple blog post example. It shows how to use CSS pseudo-elements 
+    and selectors properly in a layout design.</p>
+      <blockquote>
+    Learning CSS step by step makes it easier to understand.
+      </blockquote>
+
+  <p>
+    Read more articles on 
+    <a href="#">Web Design</a> and 
+    <a href="#">Frontend Development</a>
+  </p>
+
+  <h4>Previous Post</h4>
+  <h4>Next Post</h4>
+
+    </div>
+</body>
+</html>
