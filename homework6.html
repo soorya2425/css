@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+
+.blog-section{
+background-color: lightgray;
+padding:20px;
+}
+
+.blog-post{
+border:1px solid black;
+padding:10px;
+margin:10px;
+width:300px;
+display:inline-block;
+}
+
+
+a[href^="https"]{
+color:red;
+}
+
+
+img[src$=".jpg"]{
+border-top-right-radius:20px;
+border-bottom-left-radius:20px;
+}
+
+
+@media (max-width:600px){
+.blog-post{
+display:block;
+width:100%;
+}
+
+body{
+font-size:14px;
+}
+}
+
+
+@media (orientation:portrait){
+.blog-section{
+background-color:lightyellow;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="blog-section">
+
+<div class="blog-post">
+<h3>Travel Blog</h3>
+<img src="travel.jpg" width="200">
+<p><a href="https://example.com">Read More</a></p>
+</div>
+
+<div class="blog-post">
+<h3>Food Blog</h3>
+<img src="food.jpg" width="200">
+<p><a href="http://example.com">Read More</a></p>
+</div>
+</body>
+</html>
